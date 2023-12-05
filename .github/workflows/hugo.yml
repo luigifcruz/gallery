@@ -48,6 +48,12 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Install Theme
+        run: hugo mod get
+      - name: Create Theme Dependency List
+        run: hugo mod npm pack
+      - name: Install Theme Dependencies
+        run: npm i
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
