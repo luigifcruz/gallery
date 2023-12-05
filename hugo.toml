@@ -1,0 +1,72 @@
+title = "Luigi's Gallery"
+languageCode = "en-us"
+copyright = "© Luigi Cruz"
+disableKinds = ["taxonomy", "term"]
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+theme = "github.com/luigifcruz/hugo-theme-gallery"
+
+[params]
+  title = "Gallery"
+  description = "The gallery for Luigi Cruz photos."
+  defaultTheme = "dark"
+
+[author]
+  name = "Luigi Cruz"
+
+[outputs]
+  page = ["HTML"]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+
+[imaging]
+  resampleFilter = "CatmullRom"
+  quality = 100
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription"
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.112.0"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "hugo_stats.json"
+    target = "assets/watching/hugo_stats.json"
+
+[build]
+  writeStats = true
+  [[build.cachebusters]]
+    source = "assets/watching/hugo_stats\\.json"
+    target = "styles\\.css"
+  [[build.cachebusters]]
+    source = "(postcss|tailwind)\\.config\\.js"
+    target = "css"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(js)"
+    target = "js"
+  [[build.cachebusters]]
+    source = "assets/.*\\.(.*)$"
+    target = "$1"
+
+[menu]
+[[menu.footer]]
+  name = "Blog"
+  url = "https://luigi.ltd"
+  weight = 1
+[[menu.footer]]
+  name = "Twitter"
+  url = "https://twitter.com/luigifcruz"
+  weight = 2
+[[menu.footer]]
+  name = "GitHub"
+  url = "https://github.com/luigifcruz"
+  weight = 3
+[[menu.footer]]
+  name = "Hugo Theme"
+  url = "https://github.com/nicokaiser/hugo-theme-gallery/"
+  weight = 4
