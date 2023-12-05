@@ -1,6 +1,6 @@
 module github.com/luigifcruz/gallery
 
-go 1.21.4
+go 1.21
 
 require (
 	github.com/luigifcruz/hugo-theme-gallery v0.0.0-20231205183248-810c587653de // indirect
