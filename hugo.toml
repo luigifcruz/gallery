@@ -21,7 +21,7 @@ theme = "github.com/luigifcruz/hugo-theme-gallery"
 
 [imaging]
   resampleFilter = "CatmullRom"
-  quality = 100
+  quality = 95
   [imaging.exif]
     disableDate = false
     disableLatLong = true
