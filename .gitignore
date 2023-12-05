@@ -4,6 +4,5 @@ go.sum
 resources
 package-lock.json
 package.hugo.json
-hugo_stats.json
 package.json
 public
