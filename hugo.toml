@@ -7,7 +7,7 @@ enableRobotsTXT = true
 theme = "github.com/luigifcruz/hugo-theme-gallery"
 
 [params]
-  title = "Gallery"
+  title = "Luigi's Gallery"
   description = "The gallery for Luigi Cruz photos."
   defaultTheme = "dark"
 
