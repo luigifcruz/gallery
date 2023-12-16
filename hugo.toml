@@ -5,6 +5,7 @@ disableKinds = ["taxonomy", "term"]
 defaultContentLanguage = "en"
 enableRobotsTXT = true
 theme = "github.com/luigifcruz/hugo-theme-gallery"
+timeout = "10m"
 
 [params]
   title = "Luigi's Gallery"
